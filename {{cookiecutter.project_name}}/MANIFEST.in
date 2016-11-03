@@ -1,0 +1,9 @@
+include LICENSE
+include README.rst
+exclude MANIFEST.in
+graft {{cookiecutter.project_name}}/locale
+graft tests
+graft docs
+prune docs/_build
+global-exclude __pycache__
+global-exclude *.py[co]

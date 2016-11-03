@@ -1,0 +1,8 @@
+{
+  "project_title": "Django App",
+  "project_name": "{{ cookiecutter.project_title|lower|replace(' ', '_') }}",
+  "project_description": "Enter a short description here.",
+  "author": "morfose, lda",
+  "author_email": "geral@morfose.net",
+  "_extensions": ["jinja2_time.TimeExtension"]
+}

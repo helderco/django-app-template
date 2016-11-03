@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  docs:
+    image: nginx
+    ports:
+      - 80
+    volumes:
+      - ./docs/_build/html:/usr/share/nginx/html
+
+  tox:
+    image: helder/pythonista
+    working_dir: /src
+    volumes:
+      - ./:/src
+    entrypoint:
+      - tox
+    depends_on:
+      - db
+
+  db:
+    image: helder/mysql
+    ports:
+      - 3306
+    environment:
+      - MYSQL_DATABASE={{ cookiecutter.project_name }}
+      - MYSQL_ROOT_PASSWORD=root

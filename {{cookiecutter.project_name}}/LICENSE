@@ -1,0 +1,1 @@
+Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.author }} <{{ cookiecutter.author_email }}>
